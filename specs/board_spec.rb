@@ -17,4 +17,11 @@ class TestBoard < Minitest::Test
     assert_equal(-5, @board.state[10])
   end
 
+  def test_check_if_snake_ends_on_minus
+    snakes_ladders = { 5 => -10 }
+    assert_raises RuntimeError do
+      @board.setup_snakes_and_ladders(snakes_ladders)
+    end
+  end
+
 end

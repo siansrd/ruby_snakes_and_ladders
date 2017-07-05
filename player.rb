@@ -6,4 +6,8 @@ class Player
     @position = 0
   end
 
+  def move(num)
+    @position += num
+  end
+
 end
